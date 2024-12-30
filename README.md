@@ -97,7 +97,7 @@ Training: The model is trained with the generated dataset.
 Model Serialization: The trained model and scaler are saved using joblib.
 To deploy, FastAPI loads the serialized model, and the /predict endpoint is exposed for anomaly detection requests.
 Example code for model training: 
-   model_trainer.py 
+   model.py 
    
 API Endpoints
 A FastAPI server hosts the model as a RESTful service.
@@ -126,7 +126,7 @@ pip install -r requirements.txt
 generate_dataset.py
 
 4 Train the model:
-model_trainer.py
+model.py
 
 5 Run the FastAPI server backend:
 
