@@ -88,7 +88,7 @@ Normal Data: Generated around typical sensor values.
 Abnormal Data: Outliers with extreme values to simulate faults.
 The data is stored in sensor_data.csv, and a small Python script simulates streaming by printing data at intervals.
 Code snippet to generate data:
- gendata.py
+ generate_dataset.py
 
 Model Training and Deployment
 A logistic regression model is trained to distinguish between normal and anomalous data:
@@ -97,7 +97,7 @@ Training: The model is trained with the generated dataset.
 Model Serialization: The trained model and scaler are saved using joblib.
 To deploy, FastAPI loads the serialized model, and the /predict endpoint is exposed for anomaly detection requests.
 Example code for model training: 
-   genmodel.py 
+   model_trainer.py 
    
 API Endpoints
 A FastAPI server hosts the model as a RESTful service.
@@ -123,10 +123,10 @@ Installation and Setup
 pip install -r requirements.txt
 
 3 Generate dataset:
-gendata.py
+generate_dataset.py
 
 4 Train the model:
-genmodel.py
+model_trainer.py
 
 5 Run the FastAPI server backend:
 
